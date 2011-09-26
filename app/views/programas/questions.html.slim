@@ -1,0 +1,10 @@
+p O lugar que voce vai vende bebida?
+
+= form_for :result, :url => result_path do 
+
+  select#options name="my_choice"
+    option Yes
+    option Maybe
+    option No
+  
+  input type="submit" value="Answer"

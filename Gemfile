@@ -15,6 +15,7 @@ group :assets do
   gem 'uglifier'
 end
 
+gem "rake", "0.8.7"
 
 group :test do
   gem 'cucumber-rails'

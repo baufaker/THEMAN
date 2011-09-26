@@ -1,4 +1,9 @@
 THEMAN::Application.routes.draw do
+  
+  match "/programas/questions" => "programas#questions", :as => :initial
+  match "/programas/result" => "programas#result", :as => :result
+  
+  root :to => 'programas#questions'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
