@@ -1,0 +1,7 @@
+<% if @programas != nil%>
+ 	<% @programas.each do |programa| %>
+     	<h2><%= programa.title %></h2>
+     	<p><%= programa.categoria %></p>
+ 		<hr>
+ 		<% end %>
+ <% end %>

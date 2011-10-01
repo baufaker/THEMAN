@@ -1,5 +1,7 @@
 THEMAN::Application.routes.draw do
   
+  resources :programas
+
   match "/programas/questions" => "programas#questions", :as => :initial
   match "/programas/result" => "programas#result", :as => :result
   
