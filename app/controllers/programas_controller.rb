@@ -14,10 +14,17 @@ class ProgramasController < ApplicationController
 
   end
 
+@choice
+
   def result
+    @choice = params[:my_choice]
     @programas = Programa.find(:all, :conditions => ['categoria LIKE ?', "%#{params[:my_choice]}%"])
   end
 
+  def result2
+    @programas = Programa.find(:all, :conditions => ["categoria=? and categoria2=?", "#{params[:my_choice]}", "#{params[:my_choice2]}"])
+  end
+  
   # GET /programas/1
   # GET /programas/1.json
   def show

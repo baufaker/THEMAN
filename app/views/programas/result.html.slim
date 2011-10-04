@@ -1,0 +1,16 @@
+p O lugar pra onde você vai tem Musica?
+
+= form_for :aaaa2, :url => result2_path do 
+
+  select#option name="my_choice2"
+    option Yes
+    option No
+    
+  input type="hidden" name="my_choice" value=@choice
+  
+  input type="submit" value="Answer"
+
+
+ul
+- @programas.each do |programa|
+  li = programa.title
