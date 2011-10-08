@@ -22,7 +22,7 @@ class ProgramasController < ApplicationController
 
   def result
     @choice = params[:my_choice]
-    @programas = Programa.find(:all, :conditions => ['categoria LIKE ?', "%#{params[:my_choice]}%"])
+    @programas = Programa.find(:all, :conditions => ['categoria LIKE LOWER ?', "%#{params[:my_choice].downcase}%"])
   end
 
   def result2
