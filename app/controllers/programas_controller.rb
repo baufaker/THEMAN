@@ -16,7 +16,7 @@ class ProgramasController < ApplicationController
   end
 
   def search
-        @programas = Programa.find(:all, :conditions => ['title LIKE LOWER ?', "%#{params[:search].downcase}%"])
+        @programas = Programa.find(:all, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
   end
   
 
