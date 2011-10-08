@@ -1,3 +1,10 @@
+= button_to 'Busca de texto', :action => :search
+= button_to 'Nova sugestão', :action => :questions
+
+br
+
+h1 Resultados
+
 ul
 - @programas.each do |programa|
   li = programa.title

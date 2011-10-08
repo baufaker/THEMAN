@@ -5,6 +5,7 @@ THEMAN::Application.routes.draw do
   match "/programas/questions" => "programas#questions", :as => :initial
   match "/programas/result" => "programas#result", :as => :result
   match "/programas/result2" => "programas#result2", :as => :result2
+  match "/search" => "programas#search", :as => :search
   
   
   root :to => 'programas#questions'

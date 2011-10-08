@@ -1,0 +1,19 @@
+= button_to 'Receber Sugestão', :action => :questions
+
+h1 Busca do Cara 
+
+= form_for :aaaa, :url => search_path do
+  input type="text" name="search" 
+ 
+  input type="submit" value="Buscar!"
+
+ul
+  - if params[:search] != nil && params[:search] != ""
+    h1 Resultados
+    - if @programas == []
+      p Nao encontrei nenhum resultado
+    - @programas.each do |programa|
+      li = programa.title
+      
+- # debug @programas
+- # p = @programas

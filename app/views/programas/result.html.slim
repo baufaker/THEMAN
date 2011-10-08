@@ -9,8 +9,10 @@ p O lugar pra onde você vai tem Musica?
   input type="hidden" name="my_choice" value=@choice
   
   input type="submit" value="Answer"
-
-
+  
+=button_to 'Busca de texto', :action => :search
+  
+h1 Resultados
 ul
 - @programas.each do |programa|
   li = programa.title

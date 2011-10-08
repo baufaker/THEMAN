@@ -1,6 +1,7 @@
 class ProgramasController < ApplicationController
   # GET /programas
   # GET /programas.json
+  @choice
   def index
     @programas = Programa.all
 
@@ -14,7 +15,10 @@ class ProgramasController < ApplicationController
 
   end
 
-@choice
+  def search
+        @programas = Programa.find(:all, :conditions => ['title LIKE ?', "%#{params[:search]}%"])
+  end
+  
 
   def result
     @choice = params[:my_choice]

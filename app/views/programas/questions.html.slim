@@ -3,8 +3,9 @@ p O lugar pra onde você vai tem Bebida?
 = form_for :aaaa, :url => result_path do 
 
   select#option name="my_choice"
-    option Yes
+    option Yes 
     option No
   
   input type="submit" value="Answer"
-
+  
+= button_to 'Busca de texto', :action => :search
